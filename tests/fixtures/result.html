@@ -1,0 +1,340 @@
+<div class="flex flex-col lg:flex-row gap-2" id="page_search">
+<div class="relative hidden lg:block lg:w-1/4">
+<div class="card flex-col items-start gap-6 p-2 w-full lg:sticky lg:top-[92px]">
+<input class="form-control text-lg" name="term" placeholder="کتاب، نویسنده و..." type="text" value="ابله"/>
+<div class="flex flex-col gap-4 w-full">
+<h6 class="font-bold">کجا رو بگردم؟</h6>
+<div class="search-types">
+<label class="flex flex-wrap gap-1 items-center w-full">
+<span class="grow">کتاب</span>
+<input checked="" class="switch ms-auto" id="chk_st_Product-book" name="t" type="checkbox" value="کتاب"/>
+</label>
+<label class="flex flex-wrap gap-1 items-center w-full">
+<span class="grow">ناشر</span>
+<input checked="" class="switch ms-auto" id="chk_st_Publisher" name="t" type="checkbox" value="ناشر"/>
+</label>
+<label class="flex flex-wrap gap-1 items-center w-full">
+<span class="grow">پروفایل</span>
+<input checked="" class="switch ms-auto" id="chk_st_Profile" name="t" type="checkbox" value="پروفایل"/>
+</label>
+<label class="flex flex-wrap gap-1 items-center w-full">
+<span class="grow">مقاله</span>
+<input checked="" class="switch ms-auto" id="chk_st_Blog" name="t" type="checkbox" value="مقاله"/>
+</label>
+<label class="flex flex-wrap gap-1 items-center w-full">
+<span class="grow">دسته بندی</span>
+<input checked="" class="switch ms-auto" id="chk_st_Tags" name="t" type="checkbox" value="دسته بندی"/>
+</label>
+</div>
+</div>
+<input name="s" type="hidden" value="0"/>
+<button class="btn btn-primary w-1/2 ms-auto mt-6" id="btn_filter">
+<i class="fa-regular fa-search"></i>
+<span>جستجو</span>
+</button>
+</div>
+</div>
+<div class="relative lg:w-4/5">
+<div class="flex items-center w-full px-4 py-2">
+<div class="grow text-sm">
+<div class="hidden lg:flex items-center gap-2">
+<i class="fa-regular fa-arrow-down-wide-short font-bold"></i>
+<span class="font-bold">مرتب سازی:</span>
+<div class="flex items-center gap-3" full-search-sort-items="">
+<a class="text-primary" data-id="0" href="#">مرتبط‌ترین</a>
+<a class="text-default" data-id="1" href="#">پرفروش‌ترین</a>
+<a class="text-default" data-id="2" href="#">محبوب‌ترین</a>
+<a class="text-default" data-id="3" href="#">تازه‌ترین</a>
+</div>
+</div>
+<div class="flex lg:hidden gap-2">
+<div>
+<button class="amaze-popup-toggler flex lg:hidden btn-circle shadow bg-white text-gray-600" data-target="#sort_popup_fs" type="button">
+<i class="fa-regular fa-arrow-down-wide-short fa-fw"></i>
+</button>
+<div class="amaze-popup backdrop" id="sort_popup_fs" style="display: none;">
+<div class="popup-wrapper auto">
+<div class="popup-content">
+<div class="popup-header">
+<span class="grow text-lg text-center">مرتب سازی</span>
+<button class="popup-close btn-circle btn-sm" type="button">
+<i class="fa-regular fa-xmark fa-fw"></i>
+</button>
+</div>
+<div class="popup-body">
+<div class="dropdown-items" full-search-sort-items="">
+<a class="text-primary" data-id="0" href="#">مرتبط‌ترین</a>
+<a class="text-default" data-id="1" href="#">پرفروش‌ترین</a>
+<a class="text-default" data-id="2" href="#">محبوب‌ترین</a>
+<a class="text-default" data-id="3" href="#">تازه‌ترین</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<button class="amaze-popup-toggler flex items-center px-3 h-full rounded-full shadow bg-white text-gray-600 gap-1" data-target="#filter_popup_fs" type="button">
+<i class="fa-regular fa-filter fa-fw"></i> کجا رو بگردم؟
+                            </button>
+<div class="amaze-popup backdrop" id="filter_popup_fs" style="display: none;">
+<div class="popup-wrapper auto">
+<div class="popup-content">
+<div class="popup-header">
+<span class="grow text-lg text-center">کجا رو بگردم؟</span>
+<button class="popup-close btn-circle btn-sm" type="button">
+<i class="fa-regular fa-xmark fa-fw"></i>
+</button>
+</div>
+<div class="popup-body">
+<div class="flex flex-col gap-4 w-full">
+<div class="search-types">
+<label class="flex flex-wrap gap-1 items-center w-full">
+<span class="grow">کتاب</span>
+<input checked="" class="switch ms-auto" id="chk_st_Product-book" name="t" type="checkbox" value="کتاب"/>
+</label>
+<label class="flex flex-wrap gap-1 items-center w-full">
+<span class="grow">ناشر</span>
+<input checked="" class="switch ms-auto" id="chk_st_Publisher" name="t" type="checkbox" value="ناشر"/>
+</label>
+<label class="flex flex-wrap gap-1 items-center w-full">
+<span class="grow">پروفایل</span>
+<input checked="" class="switch ms-auto" id="chk_st_Profile" name="t" type="checkbox" value="پروفایل"/>
+</label>
+<label class="flex flex-wrap gap-1 items-center w-full">
+<span class="grow">مقاله</span>
+<input checked="" class="switch ms-auto" id="chk_st_Blog" name="t" type="checkbox" value="مقاله"/>
+</label>
+<label class="flex flex-wrap gap-1 items-center w-full">
+<span class="grow">دسته بندی</span>
+<input checked="" class="switch ms-auto" id="chk_st_Tags" name="t" type="checkbox" value="دسته بندی"/>
+</label>
+</div>
+</div>
+<button class="btn btn-primary w-full ms-auto mt-6" id="btn_filter_mob">
+<i class="fa-regular fa-search"></i>
+<span>جستجو</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 text-default text-xs">
+<span>100 مورد</span>
+</div>
+</div>
+<div class="grid gap-2 grid-cols-1 lg:grid-cols-2 p-3" page-search-result="">
+<a class="card flex items-center gap-2 p-2 rounded hover:bg-default-100" href="/book/858-the-idiot#pts=858">
+<div class="relative flex flex-col gap-2 w-full overflow-hidden">
+<div class="relative flex flex-col gap-1 overflow-hidden">
+<div class="truncate text-primary"><i class="fa-solid fa-book"></i> ابله</div>
+<div class="text-xs text-default truncate"></div>
+<div class="text-sm text-default truncate">فئودور داستایفسکی</div>
+</div>
+</div>
+
+</a>
+<a class="card flex items-center gap-2 p-2 rounded hover:bg-default-100" href="/book/858-the-idiot#pts=2207">
+<div class="relative flex flex-col gap-2 w-full overflow-hidden">
+<div class="relative flex flex-col gap-1 overflow-hidden">
+<div class="truncate text-primary"><i class="fa-solid fa-book"></i> ابله</div>
+<div class="text-xs text-default truncate"></div>
+<div class="text-sm text-default truncate">فئودور داستایفسکی</div>
+</div>
+</div>
+
+</a>
+<a class="card flex items-center gap-2 p-2 rounded hover:bg-default-100" href="/book/858-the-idiot#pts=2654">
+<div class="relative flex flex-col gap-2 w-full overflow-hidden">
+<div class="relative flex flex-col gap-1 overflow-hidden">
+<div class="truncate text-primary"><i class="fa-solid fa-book"></i> ابله (دو جلدی)</div>
+<div class="text-xs text-default truncate"></div>
+<div class="text-sm text-default truncate">فئودور داستایفسکی</div>
+</div>
+</div>
+
+</a>
+<a class="card flex items-center gap-2 p-2 rounded hover:bg-default-100" href="/book/858-the-idiot#pts=4247">
+<div class="relative flex flex-col gap-2 w-full overflow-hidden">
+<div class="relative flex flex-col gap-1 overflow-hidden">
+<div class="truncate text-primary"><i class="fa-solid fa-book"></i> ابله (دو جلدی)</div>
+<div class="text-xs text-default truncate"></div>
+<div class="text-sm text-default truncate">فئودور داستایفسکی</div>
+</div>
+</div>
+
+</a>
+<a class="card flex items-center gap-2 p-2 rounded hover:bg-default-100" href="/book/858-the-idiot#pts=13316">
+<div class="relative flex flex-col gap-2 w-full overflow-hidden">
+<div class="relative flex flex-col gap-1 overflow-hidden">
+<div class="truncate text-primary"><i class="fa-solid fa-book"></i> ابله</div>
+<div class="text-xs text-default truncate"></div>
+<div class="text-sm text-default truncate">فئودور داستایفسکی</div>
+</div>
+</div>
+
+</a>
+<a class="card flex items-center gap-2 p-2 rounded hover:bg-default-100" href="/book/858-the-idiot#pts=14781">
+<div class="relative flex flex-col gap-2 w-full overflow-hidden">
+<div class="relative flex flex-col gap-1 overflow-hidden">
+<div class="truncate text-primary"><i class="fa-solid fa-book"></i> ابله</div>
+<div class="text-xs text-default truncate"></div>
+<div class="text-sm text-default truncate">فئودور داستایفسکی</div>
+</div>
+</div>
+
+</a>
+<a class="card flex items-center gap-2 p-2 rounded hover:bg-default-100" href="/book/858-the-idiot#pts=22840">
+<div class="relative flex flex-col gap-2 w-full overflow-hidden">
+<div class="relative flex flex-col gap-1 overflow-hidden">
+<div class="truncate text-primary"><i class="fa-solid fa-book"></i> ابله</div>
+<div class="text-xs text-default truncate"></div>
+<div class="text-sm text-default truncate">فئودور داستایفسکی</div>
+</div>
+</div>
+
+</a>
+<a class="card flex items-center gap-2 p-2 rounded hover:bg-default-100" href="/book/858-the-idiot#pts=92306">
+<div class="relative flex flex-col gap-2 w-full overflow-hidden">
+<div class="relative flex flex-col gap-1 overflow-hidden">
+<div class="truncate text-primary"><i class="fa-solid fa-book"></i> ابله</div>
+<div class="text-xs text-default truncate"></div>
+<div class="text-sm text-default truncate">فئودور داستایفسکی</div>
+</div>
+</div>
+
+</a>
+<a class="card flex items-center gap-2 p-2 rounded hover:bg-default-100" href="/book/858-the-idiot#pts=77004">
+<div class="relative flex flex-col gap-2 w-full overflow-hidden">
+<div class="relative flex flex-col gap-1 overflow-hidden">
+<div class="truncate text-primary"><i class="fa-solid fa-book"></i> ابله</div>
+<div class="text-xs text-default truncate"></div>
+<div class="text-sm text-default truncate">فئودور داستایفسکی</div>
+</div>
+</div>
+
+</a>
+<a class="card flex items-center gap-2 p-2 rounded hover:bg-default-100" href="/book/858-the-idiot#pts=111558">
+<div class="relative flex flex-col gap-2 w-full overflow-hidden">
+<div class="relative flex flex-col gap-1 overflow-hidden">
+<div class="truncate text-primary"><i class="fa-solid fa-book"></i> ابله</div>
+<div class="text-xs text-default truncate"></div>
+<div class="text-sm text-default truncate">فئودور داستایفسکی</div>
+</div>
+</div>
+
+</a>
+<a class="card flex items-center gap-2 p-2 rounded hover:bg-default-100" href="/book/858-the-idiot#pts=112977">
+<div class="relative flex flex-col gap-2 w-full overflow-hidden">
+<div class="relative flex flex-col gap-1 overflow-hidden">
+<div class="truncate text-primary"><i class="fa-solid fa-book"></i> ابله</div>
+<div class="text-xs text-default truncate"></div>
+<div class="text-sm text-default truncate">فئودور داستایفسکی</div>
+</div>
+</div>
+
+</a>
+<a class="card flex items-center gap-2 p-2 rounded hover:bg-default-100" href="/book/858-the-idiot#pts=167864">
+<div class="relative flex flex-col gap-2 w-full overflow-hidden">
+<div class="relative flex flex-col gap-1 overflow-hidden">
+<div class="truncate text-primary"><i class="fa-solid fa-book"></i> ابله</div>
+<div class="text-xs text-default truncate"></div>
+<div class="text-sm text-default truncate">فئودور داستایفسکی</div>
+</div>
+</div>
+
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
