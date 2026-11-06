@@ -1,6 +1,6 @@
 [project]
 name = "iranketab-mcp"
-version = "0.1.0"
+version = "0.2.0"
 description = "Unofficial read-only MCP server for Iranketab (iranketab.ir), the Persian book store: books, translations compared, ratings, reviews, prices."
 readme = "README.md"
 license = "MIT"
