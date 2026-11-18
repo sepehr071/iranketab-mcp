@@ -150,24 +150,6 @@ lists and from earlier results. A book id stands for the work; its editions are 
 
 All 13 tools are annotated `readOnlyHint: true`.
 
-## How it works
-
-```text
-  AI agent  (Claude, Cursor, Copilot, ...)
-      │
-      │  MCP over stdio
-      ▼
-  iranketab-mcp  (runs on your machine)
-      │
-      │  HTTPS
-      └──────▶  www.iranketab.ir   server-rendered pages + the site's list and comment JSON calls
-```
-
-`iranketab-mcp` runs locally and reads the same public pages and list calls the iranketab.ir site uses, with no hosted
-server in between and no API key. Requests go out through a Chrome-impersonating client. It makes at most 2 requests
-at a time with a little jitter, keeps answers for 3 minutes, retries a failed request up to twice, and only talks to
-`www.iranketab.ir`. It only reads.
-
 ## Good to know
 
 - **Ratings are per edition.** An edition with 1 vote and 4.75 stars is not better than one with 80 votes and 4.17; `ik_editions` sorts editions with 3+ votes first.
